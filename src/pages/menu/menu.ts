@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, Nav, NavController } from 'ionic-angular';
+import { IonicPage, Nav, NavController } from 'ionic-angular/umd';
 
 interface PageItem {
   title: string
@@ -23,8 +23,10 @@ export class MenuPage {
   constructor(public navCtrl: NavController) {
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Sign in', component: 'LoginPage' },
-      { title: 'Signup', component: 'SignupPage' }
+      { title: 'All Jewelry', component: 'list-master' },
+      { title: 'Necklaces', component: 'list-necklaces' },
+      { title: 'Bracelets', component: 'list-bracelets'},
+      { title: 'Earrings', component: 'list-earrings'}
     ];
   }
 

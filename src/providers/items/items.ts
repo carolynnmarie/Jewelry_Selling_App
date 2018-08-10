@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Item } from '../../models/item';
+import { JewelryItem } from '../../models/jewelryItem';
 import { Api } from '../api/api';
 
 @Injectable()
@@ -12,10 +12,10 @@ export class Items {
     return this.api.get('/items', params);
   }
 
-  add(item: Item) {
+  add(item: JewelryItem) {
   }
 
-  delete(item: Item) {
+  delete(item: JewelryItem) {
   }
 
 }

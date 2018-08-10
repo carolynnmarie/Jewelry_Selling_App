@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-import { Item } from '../../models/item';
+import { JewelryItem } from '../../models/jewelryItem';
 
 @Injectable()
 export class Items {
-  items: Item[] = [];
+  items: JewelryItem[] = [];
 
   defaultItem: any = {
     "name": "Burt Bear",
@@ -53,7 +53,7 @@ export class Items {
     ];
 
     for (let item of items) {
-      this.items.push(new Item(item));
+      this.items.push(new JewelryItem(item));
     }
   }
 
@@ -75,11 +75,11 @@ export class Items {
     });
   }
 
-  add(item: Item) {
+  add(item: JewelryItem) {
     this.items.push(item);
   }
 
-  delete(item: Item) {
+  delete(item: JewelryItem) {
     this.items.splice(this.items.indexOf(item), 1);
   }
 }
