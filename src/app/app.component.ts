@@ -2,10 +2,9 @@ import { Component, ViewChild } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
-import { Config, Nav, Platform } from 'ionic-angular/umd';
+import { Config, Nav, Platform, MenuController } from 'ionic-angular';
 
-import { FirstRunPage } from '../pages';
-import { Settings } from '../providers';
+import { Settings } from '../providers/settings/settings';
 import { WelcomePage } from '../pages/welcome/welcome';
 
 @Component({
@@ -28,32 +27,34 @@ import { WelcomePage } from '../pages/welcome/welcome';
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
+   @ViewChild(Nav) nav: Nav;
+
   rootPage = WelcomePage;
+  pages: Array<{title: string, component: any}>;
 
-  @ViewChild(Nav) nav: Nav;
+  constructor(private translate: TranslateService, public platform: Platform,settings: Settings,public menu: MenuController,
+    private config: Config, public statusBar: StatusBar, public splashScreen: SplashScreen) {
 
-  pages: any[] = [
-    { title: 'Welcome', component: 'WelcomePage' },
-    { title: 'Tabs', component: 'TabsPage' },
-    { title: 'Cards', component: 'CardsPage' },
-    { title: 'All Jewelry', component: 'ListMasterPage' },
-    { title: 'Necklaces', component: 'ListNecklacesPage' },
-    { title: 'Bracelets', component: 'ListBraceletsPage'},
-    { title: 'Earrings', component: 'ListEarringPage'},
-    { title: 'Menu', component: 'MenuPage' },
-    { title: 'Search', component: 'SearchPage' },
-    { title: 'Cart', component: 'CartPage'},
-    { title: 'Checkout', component: 'CheckoutPage'},
-    { title: 'Item Detail', component: 'ItemDetailPage'}
-  ]
-
-  constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
-    platform.ready().then(() => {
+      platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+    this.pages = [
+      { title: 'Welcome', component: 'WelcomePage' },
+      { title: 'Tabs', component: 'TabsPage' },
+      { title: 'Cards', component: 'CardsPage' },
+      { title: 'All Jewelry', component: 'ListMasterPage' },
+      { title: 'Necklaces', component: 'ListNecklacesPage' },
+      { title: 'Bracelets', component: 'ListBraceletsPage'},
+      { title: 'Earrings', component: 'ListEarringPage'},
+      { title: 'Menu', component: 'MenuPage' },
+      { title: 'Search', component: 'SearchPage' },
+      { title: 'Cart', component: 'CartPage'},
+      { title: 'Checkout', component: 'CheckoutPage'},
+      { title: 'Item Detail', component: 'ItemDetailPage'}
+    ]
     this.initTranslate();
   }
 

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, Nav, NavController } from 'ionic-angular/umd';
+import { IonicPage, Nav, NavController } from 'ionic-angular';
 
 interface PageItem {
   title: string
