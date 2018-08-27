@@ -31,7 +31,7 @@ export class Items {
         "about": "This is my favorite necklace."
       }
     ];
-
+    
     for (let item of items) {
       this.items.push(new JewelryItem(item));
     }

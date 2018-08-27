@@ -1,14 +1,3 @@
-/**
- * A generic model that our Master-Detail pages list, create, and delete.
- *
- * Change "JewelryItem
- * " to the noun your app will use. For example, a "Contact," or a
- * "Customer," or a "Animal," or something like that.
- *
- * The Items service manages creating instances of JewelryItem
- * , so go ahead and rename
- * that something that fits your app as well.
- */
 export class JewelryItem{
 
   constructor(fields: any) {
@@ -21,12 +10,9 @@ export class JewelryItem{
 
 
 export interface JewelryItem{
-
   name: string;
-  details: string;
-  description: string;
   image: string;
+  description: string;
+  details: string;
   price: number;
-
- // [prop: string]: any;
 }
