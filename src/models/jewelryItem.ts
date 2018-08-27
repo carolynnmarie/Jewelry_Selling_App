@@ -9,20 +9,24 @@
  * , so go ahead and rename
  * that something that fits your app as well.
  */
-export class JewelryItem
- {
+export class JewelryItem{
 
   constructor(fields: any) {
-    // Quick and dirty extend/assign fields to this model
     for (const f in fields) {
-      // @ts-ignore
       this[f] = fields[f];
     }
   }
 
 }
 
-export interface JewelryItem
- {
-  [prop: string]: any;
+
+export interface JewelryItem{
+
+  name: string;
+  details: string;
+  description: string;
+  image: string;
+  price: number;
+
+ // [prop: string]: any;
 }

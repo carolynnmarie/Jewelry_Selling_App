@@ -4,6 +4,7 @@ import { IonicPage, Nav, NavController } from 'ionic-angular';
 interface PageItem {
   title: string
   component: any
+  name: string
 }
 type PageList = PageItem[]
 
@@ -16,17 +17,16 @@ export class MenuPage {
   // A reference to the ion-nav in our component
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = 'ContentPage';
 
   pages: PageList;
 
   constructor(public navCtrl: NavController) {
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'All Jewelry', component: 'list-master' },
-      { title: 'Necklaces', component: 'list-necklaces' },
-      { title: 'Bracelets', component: 'list-bracelets'},
-      { title: 'Earrings', component: 'list-earrings'}
+      { title: 'ListMasterPage',  component: 'list-master' , name: 'All Jewelry'},
+      { title: 'ListNecklacesPage', component: 'list-necklaces' , name: 'Necklaces'},
+      { title: 'ListBraceletsPage', component: 'list-bracelets', name: 'Bracelets'},
+      { title: 'ListEarringsPage', component: 'list-earrings', name: 'Earrings'}
     ];
   }
 
