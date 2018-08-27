@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home Page
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p>
+        Welcome to the Designs By Carolynn online store!
+  </p>
+  <ion-list>
+    <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      {{p.title}}
+    </button>
+  </ion-list>
+</ion-content>
+
+<ion-nav [root]="rootPage"></ion-nav>

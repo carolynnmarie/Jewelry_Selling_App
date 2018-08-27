@@ -11,17 +11,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
-// import { CardsPage } from '../pages/cards/cards';
-// import { CartPage } from '../pages/cart/cart';
-// import { CheckoutPage } from '../pages/checkout/checkout';
-// import { ItemDetailPage } from '../pages/item-detail/item-detail';
-// import { ListBraceletsPage } from '../pages/list-bracelets/list-bracelets';
-// import { ListEarringsPage } from '../pages/list-earrings/list-earrings';
-// import { ListNecklacesPage } from '../pages/list-necklaces/list-necklaces';
-// import { MenuPage } from '../pages/menu/menu';
-// import { SearchPage } from '../pages/search/search';
-// import { TabsPage } from '../pages/tabs/tabs';
-// import { WelcomePage } from '../pages/welcome/welcome';
+
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -65,7 +55,6 @@ export function provideSettings(storage: Storage) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-
   ],
   providers: [
     Api,

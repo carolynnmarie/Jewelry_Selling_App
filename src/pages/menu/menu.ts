@@ -1,12 +1,14 @@
-import { Component, ViewChild } from '@angular/core';
-import { IonicPage, Nav, NavController } from 'ionic-angular';
+import { Component} from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+
 
 interface PageItem {
   title: string
   component: any
   name: string
 }
-type PageList = PageItem[]
+//type PageList = PageItem[]
 
 @IonicPage()
 @Component({
@@ -14,19 +16,18 @@ type PageList = PageItem[]
   templateUrl: 'menu.html'
 })
 export class MenuPage {
-  // A reference to the ion-nav in our component
-  @ViewChild(Nav) nav: Nav;
 
+  rootPage: any = 'ContentPage';
+  pages: PageItem[];
 
-  pages: PageList;
-
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public navParams: NavParams) {
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'ListMasterPage',  component: 'list-master' , name: 'All Jewelry'},
-      { title: 'ListNecklacesPage', component: 'list-necklaces' , name: 'Necklaces'},
-      { title: 'ListBraceletsPage', component: 'list-bracelets', name: 'Bracelets'},
-      { title: 'ListEarringsPage', component: 'list-earrings', name: 'Earrings'}
+      {title: 'SearchPage',component:'search',name: 'Search All Jewelry'},
+      { title: 'ListMasterPage',  component: 'list-master' , name: 'Browse All Jewelry'},
+      { title: 'ListNecklacesPage', component: 'list-necklaces' , name: 'Browse Necklaces'},
+      { title: 'ListBraceletsPage', component: 'list-bracelets', name: 'Browse Bracelets'},
+      { title: 'ListEarringsPage', component: 'list-earrings', name: 'Browse Earrings'}
     ];
   }
 
@@ -35,8 +36,7 @@ export class MenuPage {
   }
 
   openPage(page: PageItem) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.navCtrl.setRoot(page.component);
+    
   }
 }

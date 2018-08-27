@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular/umd';
 
-import { Tab1Root, Tab2Root, Tab3Root } from '/Users/carolynn/dev/Work-in-process-Projects/JewelryApp/src/pages/index';
+import { Tab1Root, Tab2Root, Tab3Root } from '..';
 
 @IonicPage()
 @Component({

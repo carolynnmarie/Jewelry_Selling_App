@@ -7,48 +7,28 @@ export class Items {
   items: JewelryItem[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "name": "bBlackGlassBlueTealSeed bracelet",
+    "profilePic": "assets/jewelrypics/jewelryapppics/bBlackGlassBlueTealSeed.jpg",
+    "about": "This is a bracelet.",
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "BlackGlassBlueTealSeed bracelet",
+        "profilePic": "assets/jewelrypics/jewelryapppics/bBlackGlassBlueTealSeed.jpg",
+        "about": "This is a bracelet.",
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "BlackBiconeCluster earrings",
+        "profilePic": "assets/jewelrypics/jewelryapppics/eBlackBiconeCluster.jpg",
+        "about": "These are earrings."
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
-      },
-      {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
-      },
-      {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
-      },
-      {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "name": "Butterfly necklace",
+        "profilePic": "assets/jewelrypics/jewelryapppics/nButterfly.jpg",
+        "about": "This is my favorite necklace."
       }
     ];
 

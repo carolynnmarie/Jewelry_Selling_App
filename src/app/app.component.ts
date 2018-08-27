@@ -33,13 +33,14 @@ export class MyApp {
       { title: 'Cards', component: 'CardsPage' },
       { title: 'All Jewelry', component: 'ListMasterPage' },
       { title: 'Necklaces', component: 'ListNecklacesPage' },
-      { title: 'Bracelets', component: 'ListBraceletsPage'},
-      { title: 'Earrings', component: 'ListEarringPage'},
+      { title: 'Bracelets', component: 'ListNecklacesPage'},
+      { title: 'Earrings', component: 'ListEarringsPage'},
       { title: 'Menu', component: 'MenuPage' },
       { title: 'Search', component: 'SearchPage' },
       { title: 'Cart', component: 'CartPage'},
       { title: 'Checkout', component: 'CheckoutPage'},
-      { title: 'Item Detail', component: 'ItemDetailPage'}
+      { title: 'Item Detail', component: 'ItemDetailPage'},
+      { title: 'Home Page', component: 'HomePage'}
     ]
     this.initTranslate();
   }
