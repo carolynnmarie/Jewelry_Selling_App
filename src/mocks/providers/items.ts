@@ -39,13 +39,6 @@ export class Items {
         price: "$35.00"
       }
     ];
-    // let i: number = 0;
-    // let x: number = items.length;
-    // while(i<x){
-    //   items.pop();
-    //   i++;
-    // }
-    
     for (let item of items) {
       this.items.push(new JewelryItem(item));
     }
