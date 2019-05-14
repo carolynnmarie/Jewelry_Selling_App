@@ -16,13 +16,27 @@ import { Items } from '../../providers';
   templateUrl: 'list-earrings.html',
 })
 export class ListEarringsPage {
+  
   currentItems: JewelryItem[];
+  eItems: JewelryItem[];
+  i: number;
+
   constructor(public navCtrl: NavController, public navParams: NavParams,public items: Items) {
     this.currentItems = this.items.query();
+    this.eItems = this.currentItems;
+    this.i = 0;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListEarringsPage');
+    this.i = 0;
+    this.currentItems.forEach(element => {
+      if(element.type == "earrings"){
+        this.eItems[this.i] = element;    
+        this.i++;
+      }         
+    });
+    this.eItems = this.eItems.slice(0,this.i);
+
   }
 /**
    * Navigate to the detail page for this item.
@@ -31,5 +45,9 @@ export class ListEarringsPage {
     this.navCtrl.push('ItemDetailPage', {
       item: item
     });
+  }
+
+  backToHome(){
+    this.navCtrl.setRoot('HomePage');
   }
 }

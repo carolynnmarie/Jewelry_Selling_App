@@ -8,11 +8,12 @@
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  <div class="item-profile" #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
   </div>
-
   <div class="item-detail" padding>
     <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
+    <p>{{item.type}}</p>
+    <p>{{item.description}}</p>
+    <p>{{item.price}}</p>
   </div>
 </ion-content>

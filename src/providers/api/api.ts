@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
  */
 @Injectable()
 export class Api {
-  url: string = 'https://example.com/api/v1';
+  url: string = 'https://localhost:8080';
 
   constructor(public http: HttpClient) {
   }
@@ -17,7 +17,6 @@ export class Api {
         params: new HttpParams()
       };
     }
-
     // Support easy query params for GET requests
     if (params) {
       reqOpts.params = new HttpParams();
@@ -25,7 +24,6 @@ export class Api {
         reqOpts.params = reqOpts.params.set(k, params[k]);
       }
     }
-
     return this.http.get(this.url + '/' + endpoint, reqOpts);
   }
 

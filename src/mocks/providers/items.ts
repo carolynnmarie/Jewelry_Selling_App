@@ -7,30 +7,44 @@ export class Items {
   items: JewelryItem[] = [];
 
   defaultItem: any = {
-    "name": "bBlackGlassBlueTealSeed bracelet",
-    "profilePic": "assets/jewelrypics/jewelryapppics/bBlackGlassBlueTealSeed.jpg",
-    "about": "This is a bracelet.",
+    name: "bBlackGlassBlueTealSeed bracelet",
+    profilePic: "assets/jewelrypics/jewelryapppics/bBlackGlassBlueTealSeed.jpg",
+    description: "This is a bracelet.",
+    type: "bracelet",
+    price: "$15.00"
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "BlackGlassBlueTealSeed bracelet",
-        "profilePic": "assets/jewelrypics/jewelryapppics/bBlackGlassBlueTealSeed.jpg",
-        "about": "This is a bracelet.",
+        name: "BlackGlassBlueTealSeed bracelet",
+        profilePic: "assets/jewelrypics/jewelryapppics/bBlackGlassBlueTealSeed.jpg",
+        description: "This is a bracelet.",
+        type: "bracelet",
+        price: "$15.00"
       },
       {
-        "name": "BlackBiconeCluster earrings",
-        "profilePic": "assets/jewelrypics/jewelryapppics/eBlackBiconeCluster.jpg",
-        "about": "These are earrings."
+        name: "BlackBiconeCluster earrings",
+        profilePic: "assets/jewelrypics/jewelryapppics/eBlackBiconeCluster.jpg",
+        description: "These are earrings.",
+        type: "earrings",
+        price: "$15.00"
       },
       {
-        "name": "Butterfly necklace",
-        "profilePic": "assets/jewelrypics/jewelryapppics/nButterfly.jpg",
-        "about": "This is my favorite necklace."
+        name: "Butterfly necklace",
+        profilePic: "assets/jewelrypics/jewelryapppics/nButterfly.jpg",
+        description: "This is my favorite necklace.",
+        type: "necklace",
+        price: "$35.00"
       }
     ];
+    // let i: number = 0;
+    // let x: number = items.length;
+    // while(i<x){
+    //   items.pop();
+    //   i++;
+    // }
     
     for (let item of items) {
       this.items.push(new JewelryItem(item));

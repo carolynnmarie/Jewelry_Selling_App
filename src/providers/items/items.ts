@@ -8,7 +8,7 @@ export class Items {
 
   constructor(public api: Api) { }
 
-  query(params?: any) {
+  query(params?: JewelryItem) {
     return this.api.get('/items', params);
   }
 

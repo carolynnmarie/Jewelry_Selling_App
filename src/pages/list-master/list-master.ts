@@ -20,19 +20,13 @@ export class ListMasterPage {
    * The view loaded, let's query our items for the list
    */
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListEarringsPage');
+    this.currentItems = this.items.query();
   }
 
-  /**
-   * Delete an item from the list of items.
-   */
   deleteItem(item) {
     this.items.delete(item);
   }
 
-  /**
-   * Navigate to the detail page for this item.
-   */
   openItem(item: JewelryItem) {
     this.navCtrl.push('ItemDetailPage', {
       item: item

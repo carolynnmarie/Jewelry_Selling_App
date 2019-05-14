@@ -11,8 +11,11 @@
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <button (click)="backToHome()">Back</button>
+  </ion-item>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems">
+    <ion-item-sliding *ngFor="let item of eItems">
       <button ion-item (click)="openItem(item)">
         <ion-avatar item-start>
           <img [src]="item.profilePic" />

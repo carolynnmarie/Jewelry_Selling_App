@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { JewelryItem } from '../../models/jewelryItem';
 import { Items } from '../../providers';
-/**
- * Generated class for the ListNecklacesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -18,13 +13,23 @@ import { Items } from '../../providers';
 export class ListNecklacesPage {
 
   currentItems: JewelryItem[];
+  jItems: JewelryItem[];
 
   constructor(public navCtrl: NavController,public items: Items, public navParams: NavParams,) {
-    this.currentItems = this.items.query();
+    this.currentItems= this.items.query();
+    this.jItems = this.currentItems;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ListNecklacesPage');
+    let i : number = 0; 
+    this.currentItems.forEach(element => {
+      if(element.type == "necklace"){
+        this.jItems[i] = element;    
+        i++;
+      }         
+    });
+    this.jItems = this.jItems.slice(0,i);
+    i = 0;
   }
 
   openItem(item: JewelryItem) {
