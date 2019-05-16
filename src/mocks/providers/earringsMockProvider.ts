@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 
 import { JewelryItem } from '../../models/jewelryItem';
+import { Items } from './items';
 
 @Injectable()
-export class EarringsMockProvider {
+export class EarringsMockProvider extends Items {
   items: JewelryItem[] = [];
 
   defaultItem: any = {
@@ -16,6 +17,7 @@ export class EarringsMockProvider {
 
 
   constructor() {
+      super();
     let items = [
       {
         name: "BlackGlassBlueTealSeed bracelet",
