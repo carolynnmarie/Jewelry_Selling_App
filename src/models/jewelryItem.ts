@@ -8,7 +8,6 @@ export class JewelryItem{
 
 }
 
-
 export interface JewelryItem{
   name: string;
   type: string;
