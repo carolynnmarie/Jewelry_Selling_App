@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular/umd';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { JewelryItem } from '../../models/jewelryItem';
 import { Items } from '../../providers';
+import { BraceletsApi } from '../../providers/bracelets/BraceletsApi';
+import { BraceletItem } from '../../models/BraceletItem';
 /**
  * Generated class for the ListBraceletsPage page.
  *
@@ -16,12 +18,12 @@ import { Items } from '../../providers';
 })
 export class ListBraceletsPage {
 
-  currentItems: JewelryItem[];
-  bItems: JewelryItem[];
+  currentItems: BraceletItem[];
+  bItems: BraceletItem[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public items: Items) {
-    this.currentItems = this.items.query();
-    this.bItems = this.currentItems;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public braceletApi: BraceletsApi) {
+    this.currentItems = this.braceletApi.query();
+    this.bItems = new JewelryItem[this.currentItems.length-1];
   }
 
   ionViewDidLoad() {
@@ -32,7 +34,12 @@ export class ListBraceletsPage {
         i++;
       }         
     });
-    this.bItems = this.bItems.slice(0,i);
+    let braceletItems = new JewelryItem[i]; i=0;
+    this.bItems.forEach(element => {
+      braceletItems[i] = element;
+      i++;
+    })
+    this.bItems = braceletItems;
   }
 
   /**

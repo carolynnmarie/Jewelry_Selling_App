@@ -2,16 +2,17 @@ import { Injectable } from '@angular/core';
 
 import { JewelryItem } from '../../models/jewelryItem';
 import { Items } from './items';
+import { EarringsItem } from '../../models/EarringsItem';
 
 @Injectable()
 export class EarringsMockProvider extends Items {
-  items: JewelryItem[] = [];
+  items: EarringsItem[] = [];
 
   defaultItem: any = {
-    name: "bBlackGlassBlueTealSeed bracelet",
-    profilePic: "assets/jewelrypics/jewelryapppics/bBlackGlassBlueTealSeed.jpg",
-    description: "This is a bracelet.",
-    type: "bracelet",
+    name: "BlackBiconeCluster earrings",
+    profilePic: "assets/jewelrypics/jewelryapppics/eBlackBiconeCluster.jpg",
+    description: "These are earrings.",
+    type: "earrings",
     price: "$15.00"
   };
 
@@ -20,29 +21,14 @@ export class EarringsMockProvider extends Items {
       super();
     let items = [
       {
-        name: "BlackGlassBlueTealSeed bracelet",
-        profilePic: "assets/jewelrypics/jewelryapppics/bBlackGlassBlueTealSeed.jpg",
-        description: "This is a bracelet.",
-        type: "bracelet",
-        price: "$15.00"
-      },
-      {
         name: "BlackBiconeCluster earrings",
         profilePic: "assets/jewelrypics/jewelryapppics/eBlackBiconeCluster.jpg",
         description: "These are earrings.",
         type: "earrings",
         price: "$15.00"
-      },
-      {
-        name: "Butterfly necklace",
-        profilePic: "assets/jewelrypics/jewelryapppics/nButterfly.jpg",
-        description: "This is my favorite necklace.",
-        type: "necklace",
-        price: "$35.00"
-      }
-    ];
+      }];
     for (let item of items) {
-      this.items.push(new JewelryItem(item));
+      this.items.push(new EarringsItem(item));
     }
   }
 
@@ -64,11 +50,11 @@ export class EarringsMockProvider extends Items {
     });
   }
 
-  add(item: JewelryItem) {
+  add(item: EarringsItem) {
     this.items.push(item);
   }
 
-  delete(item: JewelryItem) {
+  delete(item: EarringsItem) {
     this.items.splice(this.items.indexOf(item), 1);
   }
 }
