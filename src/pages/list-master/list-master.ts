@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { JewelryItem } from '../../models/jewelryItem';
-import { Items } from '../../providers';
+import { Items } from '../../mocks/providers/items';
 
 @IonicPage()
 @Component({
@@ -32,4 +32,7 @@ export class ListMasterPage {
       item: item
     });
   }
+
+  
+
 }

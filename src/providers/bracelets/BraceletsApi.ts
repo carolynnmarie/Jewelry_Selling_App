@@ -1,22 +1,22 @@
-import { Injectable } from '@angular/core';
+// import { Injectable } from '@angular/core';
 
-import { JewelryItem } from '../../models/jewelryItem';
-import { Api } from '../api/api';
-import { Items } from '../items/items';
+// import { BraceletItem } from '../../models/BraceletItem';
+// import { Api } from '../api/api';
+// import { Items } from '../items/items';
 
-export class BraceletsApi extends Items {
-    constructor(public api: Api) {
-        super(api);
-    }
+// export class BraceletsApi  {
+//     constructor(public api: Api) {
+      
+//     }
 
-  query(params?: JewelryItem) {
-    return this.api.get('/bracelets', params);
-  }
+//   query(params?: BraceletItem) {
+//     return this.api.get('/bracelets', params);
+//   }
 
-  add(item: JewelryItem) {
-  }
+//   add(item: BraceletItem) {
+//   }
 
-  delete(item: JewelryItem) {
-  }
+//   delete(item: BraceletItem) {
+//   }
 
-}
+//}

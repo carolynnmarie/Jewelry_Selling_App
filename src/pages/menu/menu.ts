@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular/umd';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
 
@@ -36,7 +36,7 @@ export class MenuPage {
   }
 
   openPage(page: PageItem) {
-    this.navCtrl.setRoot(page.component);
+    this.navCtrl.push(page.component);
     
   }
 }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { JewelryItem } from '../../models/jewelryItem';
-import { Items } from '../../providers';
+import { Items } from '../../mocks/providers/items';
 /**
  * Generated class for the ListEarringsPage page.
  *
@@ -29,6 +29,8 @@ export class ListEarringsPage {
 
   ionViewDidLoad() {
     this.i = 0;
+    this.currentItems = this.items.query();
+    this.eItems = this.currentItems;
     this.currentItems.forEach(element => {
       if(element.type == "earrings"){
         this.eItems[this.i] = element;    

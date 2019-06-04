@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular/umd';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { JewelryItem } from '../../models/jewelryItem';
-import { Items } from '../../providers';
+import { Items } from '../../mocks/providers/items';
 
 
 @IonicPage()

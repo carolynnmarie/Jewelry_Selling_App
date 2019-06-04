@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular/umd';
+import { IonicPage, NavController } from 'ionic-angular';
 
 interface PageItem {
   title: string
@@ -16,6 +16,7 @@ export class HomePage {
 
   pages: PageList;
 
+
   constructor(public navCtrl: NavController) {
     this.pages = [
       //{ title: 'SearchPage',component:'SearchPage'},
@@ -28,11 +29,11 @@ export class HomePage {
    }
 
    ionViewDidLoad() {
-    
+
    }
    
    openPage(page: PageItem) {
-    this.navCtrl.push(page.component);
+    this.navCtrl.setRoot(page.component);
   }
 
 }
