@@ -10,9 +10,21 @@ import { Items } from '../../providers';
 })
 export class ItemDetailPage {
   item: any;
+  cart: Items[];
 
   constructor(public navCtrl: NavController, navParams: NavParams, items: Items) {
     this.item = navParams.get('item') || items.defaultItem;
   }
 
+  addToCart(){
+    this.cart.push(this.item);
+  }
+
+  goToCart(){
+
+  }
+
+  backToList(){
+
+  }
 }

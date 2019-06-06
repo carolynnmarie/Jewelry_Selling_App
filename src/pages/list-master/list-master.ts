@@ -33,6 +33,9 @@ export class ListMasterPage {
     });
   }
 
+  goToCart(){
+    
+  }
   
 
 }
