@@ -21,20 +21,19 @@ export class ListBraceletsPage {
   currentItems: JewelryItem[];
   bItems: JewelryItem[];
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) {
     this.currentItems = this.items.query();
-    this.bItems = this.currentItems;
+    this.bItems = [];
   }
 
   ionViewDidLoad() {
-    let i : number = 0; 
     this.currentItems.forEach(element => {
       if(element.type == "bracelet"){
-        this.bItems[i] = element;    
-        i++;
+        this.bItems.push(element);
       }         
     });
-    this.bItems = this.bItems.slice(0,i);
+
   }
 
   /**

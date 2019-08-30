@@ -19,26 +19,19 @@ export class ListEarringsPage {
   
   currentItems: JewelryItem[];
   eItems: JewelryItem[];
-  i: number;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public items: Items) {
     this.currentItems = this.items.query();
-    this.eItems = this.currentItems;
-    this.i = 0;
+    this.eItems = [];
   }
 
   ionViewDidLoad() {
-    this.i = 0;
-    this.currentItems = this.items.query();
-    this.eItems = this.currentItems;
     this.currentItems.forEach(element => {
       if(element.type == "earrings"){
-        this.eItems[this.i] = element;    
-        this.i++;
+        this.eItems.push(element);
       }         
     });
-    this.eItems = this.eItems.slice(0,this.i);
-
   }
 /**
    * Navigate to the detail page for this item.

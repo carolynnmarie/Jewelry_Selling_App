@@ -17,19 +17,15 @@ export class ListNecklacesPage {
 
   constructor(public navCtrl: NavController,public items: Items, public navParams: NavParams,) {
     this.currentItems= this.items.query();
-    this.jItems = this.currentItems;
+    this.jItems = [];
   }
 
   ionViewDidLoad() {
-    let i : number = 0; 
     this.currentItems.forEach(element => {
       if(element.type == "necklace"){
-        this.jItems[i] = element;    
-        i++;
+        this.jItems.push(element);
       }         
     });
-    this.jItems = this.jItems.slice(0,i);
-    i = 0;
   }
 
   openItem(item: JewelryItem) {
