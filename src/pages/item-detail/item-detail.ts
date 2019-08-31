@@ -16,9 +16,9 @@ export class ItemDetailPage {
     this.item = navParams.get('item') || items.defaultItem;
   }
 
-  ionViewDidLoad(){
-    
-  }
+  // ionViewDidLoad(){
+
+  // }
 
   addToCart(){
     this.cart.push(this.item);

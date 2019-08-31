@@ -27,6 +27,7 @@ export class ListEarringsPage {
   }
 
   ionViewDidLoad() {
+    this.currentItems = this.items.query();
     this.currentItems.forEach(element => {
       if(element.type == "earrings"){
         this.eItems.push(element);

@@ -62,6 +62,7 @@ export class Items {
     });
   }
 
+
   add(item: JewelryItem) {
     this.items.push(item);
   }

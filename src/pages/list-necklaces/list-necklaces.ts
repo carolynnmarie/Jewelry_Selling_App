@@ -21,6 +21,7 @@ export class ListNecklacesPage {
   }
 
   ionViewDidLoad() {
+    this.currentItems = this.items.query();
     this.currentItems.forEach(element => {
       if(element.type == "necklace"){
         this.jItems.push(element);

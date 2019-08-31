@@ -28,6 +28,7 @@ export class ListBraceletsPage {
   }
 
   ionViewDidLoad() {
+    this.currentItems = this.items.query();
     this.currentItems.forEach(element => {
       if(element.type == "bracelet"){
         this.bItems.push(element);
